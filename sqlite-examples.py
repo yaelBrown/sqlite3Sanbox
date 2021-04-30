@@ -42,6 +42,7 @@ for row in cur.execute("SELECT * FROM students WHERE name = 'Yael'"):
     res.append(row)
 
 print(res[0][0])
+
 cur.execute("UPDATE students SET name = 'YaEL' WHERE name = 'Yael'")
 con.commit()
 
@@ -49,6 +50,8 @@ print("after")
 res = list()
 for row in cur.execute("SELECT * FROM students WHERE name = 'Yael'"):
     res.append(row)
+
+print(res[0][0])
 
 # Delete from database
 cur.execute("DELETE FROM students WHERE name = 'Kevin'")
